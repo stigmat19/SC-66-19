@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<label for="aaa">hello</label>
+<form action="http://fe.it-academy.by/TestForm.php" method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <legend>inputs</legend>
+        <label>
+            <input type="text" name="firstname" placeholder="firstname" tabindex="3">
+            Ваше имя
+        </label><br>
+        <input id="aaa" type="text" name="lastname" value="lastname" readonly tabindex="2" autofocus> <br>
+        <input type="password" name="pass" tabindex="1"> <br>
+    </fieldset>
+
+    <fieldset >
+        <legend>checkbox</legend>
+        <input type="checkbox" name="checkbox1" value="yes">
+        <input type="checkbox" name="checkbox2" value="aaa" >
+        <input type="checkbox" name="checkbox3" value="bbb">
+    </fieldset>
+    <fieldset >
+        <legend>radio</legend>
+        <input type="radio" name="radio1" value="radio1">
+        <input type="radio" name="radio1" value="radio2">
+        <input type="radio" name="radio1" value="radio3">
+
+        <input type="radio" name="radio2" value="radio2-1">
+        <input type="radio" name="radio2" value="radio2-2">
+        <input type="radio" name="radio2" value="radio2-3">
+    </fieldset>
+    <fieldset >
+        <legend>file</legend>
+        <input type="file" name="file">
+    </fieldset>
+    <fieldset >
+        <legend>textarea</legend>
+        <textarea cols="30" rows="10" name="text">
+
+        </textarea>
+    </fieldset>
+
+    <fieldset >
+        <legend>select</legend>
+        <select name="select[]" multiple size="2">
+            <option value="1">1111111111</option>
+            <option value="ssdsdsds">sd22</option>
+            <option value="3">3333333333</option>
+            <option value="4">444444444</option>
+        </select>
+    </fieldset>
+
+
+    <fieldset >
+        <legend>HTML5</legend>
+        <input type="url" placeholder="url" name="url">
+        <input type="text" multiple placeholder="email" name="email" required pattern="[0-9]{5,10}">
+        <input type="date" placeholder="date" name="date">
+        <input type="number" min="0" max="100" step="10" name="number">
+        <input type="range" id="bbb" min="0" max="90" step="10" name="range">
+        <p id="ccc"></p>
+    </fieldset>
+
+    <button type="submit">send</button>
+</form>
+
+
+<script>
+    var a = document.getElementById('bbb');
+    a.addEventListener('change', function () {
+        var b = document.getElementById('ccc');
+        b.innerText = a.value;
+    })
+
+</script>
+</body>
+</html>
