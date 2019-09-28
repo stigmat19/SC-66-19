@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 10000px;
+        }
+        h2 ~ pre {
+            color: red;
+        }
+
+        div.a > p {
+            color: green;
+        }
+
+        input[type="text"]{
+            width:100px;
+            height: 100px;
+        }
+        [href*="lin"]{
+            color: #ff1f29;
+        }
+        .bbb:first-letter{
+            font-size: 100px;
+        }
+        .bbb:first-line{
+            background-color: red;
+        }
+       .bbb::selection {
+            color: #ff0;
+            background: #000;
+       }
+        strong{
+            display: block;
+            transition: 0.5s;
+        }
+        strong:before{
+           content: "Старт ";
+        }
+        strong:after{
+           content: " Финиш";
+        }
+        /*strong:hover{*/
+            /*width:150px;*/
+            /*height: 150px;*/
+            /*background-color: aquamarine;*/
+        /*}*/
+        strong:first-of-type{
+            color: red;
+        }
+
+        strong:nth-child(10){
+            background-color: yellow;
+        }
+
+        strong:last-child{
+            color: greenyellow;
+        }
+        em:first-of-type{
+            background-color: blue;
+        }
+        em:last-of-type{
+            background-color: blue;
+        }
+        strong:nth-child(even){
+            background-color: grey;
+        }
+        strong:nth-child(odd){
+            background-color: lightblue;
+        }
+        .tttt{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin: 50px;
+            position: relative;
+            -webkit-box-shadow: -16px -8px 25px 8px rgba(196,33,196,0.65);
+            -moz-box-shadow: -16px -8px 25px 8px rgba(196,33,196,0.65);
+            box-shadow: -16px -8px 25px 8px rgba(196,33,196,0.65);
+        }
+        .tttt:before{
+            content: "";
+            width: 5px;
+            height: 5px;
+            background: blue;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .tttt:after{
+            content: "";
+            width: 5px;
+            height: 5px;
+            background: green;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="a">
+    <h2>Это заголовок</h2>
+    <pre>Этот текст будет красным.</pre>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, itaque laudantium! Aperiam atque blanditiis
+        commodi consequatur, culpa ex facere iste labore laudantium modi nemo nesciunt porro possimus quidem veritatis
+        voluptatibus.</p>
+    <div>
+        <div>
+            <div>
+                <p>А этот — обычным, чёрным цветом.</p>
+
+                <p>И этот — чёрным цветом.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<p class="bbb"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur distinctio doloremque incidunt, ipsum nulla placeat reprehenderit tenetur? Consequuntur explicabo magnam neque pariatur quos ratione rerum, veritatis. Animi, eaque, expedita.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur distinctio doloremque incidunt, ipsum nulla placeat reprehenderit tenetur? Consequuntur explicabo magnam neque pariatur quos ratione rerum, veritatis. Animi, eaque, expedita.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur distinctio doloremque incidunt, ipsum nulla placeat reprehenderit tenetur? Consequuntur explicabo magnam neque pariatur quos ratione rerum, veritatis. Animi, eaque, expedita.
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur distinctio doloremque incidunt, ipsum nulla placeat reprehenderit tenetur? Consequuntur explicabo magnam neque pariatur quos ratione rerum, veritatis. Animi, eaque, expedita.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dicta dignissimos fugiat ipsam maxime nam nisi
+    praesentium, rem rerum similique. Et fugit illum iste iure labore odit, quam unde voluptate?</p>
+
+
+<pre>этот текст будет красным.</pre>
+
+<pre>этот текст будет красным.</pre>
+
+
+<input type="text">
+<input type="checkbox">
+<input type="radio">
+<input type="date">
+<input type="color">
+
+<a href="#test">test</a>
+<a href="https://www.onliner.by">test</a>
+
+<div>
+    <h3>hello</h3>
+    <strong>hello</strong>
+    <strong>ееее</strong>
+    <strong>heрррроllo</strong>
+    <strong>мвавава</strong>
+    <strong>heмирпрllo</strong>
+    <strong>имрара</strong>
+    <strong>hello</strong>
+    <strong>ееее</strong>
+    <strong>heрррроllo</strong>
+    <strong>мвавава</strong>
+    <strong>heмирпрllo</strong>
+    <strong>имрара</strong>
+    <strong>hello</strong>
+    <strong>ееее</strong>
+    <em>test</em>
+    <strong>heрррроllo</strong>
+    <strong>мвавава</strong>
+    <strong>heмирпрllo</strong>
+    <em>test</em>
+    <strong>имрара</strong>
+    <strong>hello</strong>
+    <strong>ееее</strong>
+    <em>test</em>
+    <strong>heрррроllo</strong>
+    <strong>мвавава</strong>
+    <strong>heмирпрllo</strong>
+    <strong>имрара</strong>
+    <strong>hello</strong>
+    <strong>ееее</strong>
+    <strong>heрррроllo</strong>
+    <strong>мвавава</strong>
+    <strong>heмирпрllo</strong>
+    <strong>имрара</strong>
+</div>
+
+
+<div class="tttt"></div>
+
+
+
+</body>
+</html>
